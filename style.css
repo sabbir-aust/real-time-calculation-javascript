@@ -17,6 +17,6 @@ table{
     position: relative;
 }
 input[type="button"]{
-    
-    width: 50px;
+    text-align: center;
+    width: 60px;
 }

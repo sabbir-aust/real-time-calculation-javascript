@@ -22,19 +22,19 @@
     <tr id='row_0' contenteditable="true">
 
                 <td>
-                    <input type="checkbox" class="myCheck" oninput ="calculate('row_0')">
+                    <input type="checkbox"  class="myCheck" oninput ="calculate('row_0')">
                 </td>
                 <td>
                     <input type="text" required="required">
                 </td>
                 <td>
-                    <input type="text" id="bs" required="required" name="basic" oninput ="calculate('row_0')">
+                    <input type="number" id="bs" required="required" name="basic" oninput ="calculate('row_0')" min="0">
                 </td>
                 <td>
-                    <input type="text" id="al" required="required" name="allowance" oninput ="calculate('row_0')">
+                    <input type="number" id="al" required="required" name="allowance" oninput ="calculate('row_0')" min="0">
                 </td>
                 <td>
-                    <input class="t" type="text" required="required" name="total" id="tl" readonly>
+                    <input class="t" type="number" required="required" name="total" id="tl" readonly>
                 </td>
            
         </tr>
@@ -42,7 +42,7 @@
   </table>
   
   <h3>Result = <input id="result" type="text"></h3>
-
+  
 
   <script type="text/javascript" src="main.js"></script>
 </body>

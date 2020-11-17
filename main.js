@@ -61,9 +61,10 @@
         var text = textBox.value;
 
         checkVal = checkVal + parseFloat(text);
-        document.getElementById("result").value = checkVal;
+        
         //selecteditem += checkbox[i].value;
       }
+        document.getElementById("result").value = checkVal;
 
 }
 

@@ -64,9 +64,12 @@
         
         //selecteditem += checkbox[i].value;
       }
-        document.getElementById("result").value = checkVal;
+      document.getElementById("result").value = checkVal;
+      
 
 }
+      
+
 
   }
 
@@ -85,27 +88,40 @@
       let lastCell = lastRow.getElementsByTagName("input")[0];
       let lastCellValue =(lastCell.value);
       console.log(lastCellValue);
+      
+        if(rowCount == 2){
+          let table = document.getElementById("myTable").tBodies.namedItem("myTBody");
+          let checkbox = table.getElementsByClassName("myCheck");
+          // var gg = (lastCellValue);
+          // console.log(gg);
+          if(checkbox.checked == true){
 
-        // if(rowCount == 2){
-        //   // var gg = (lastCellValue);
-        //   // console.log(gg);
-        //   document.getElementById("result").value = 0;
-        // } else{
-        //     var gg = (finalResult) - (lastCellValue);
-        //     console.log(gg);
-        //     document.getElementById("result").value = gg;
-        //   }
+          document.getElementById("result").value = checkbox[rowCount].checked.value;
+          }
+        } else{
+            var gg = (finalResult) - (lastCellValue);
+            console.log(gg);
+            document.getElementById("result").value = gg;
+          }
 
       if(rowCount > '2'){
         
         var row = table.deleteRow(rowCount-1);
         rowCount--; 
       }
-      else{
+      else if(checkbox.checked == true){
+        let table = document.getElementById("myTable").tBodies.namedItem("myTBody");
+          let checkbox = table.getElementsByClassName("myCheck");
+          // var gg = (lastCellValue);
+          // console.log(gg);
+
+          document.getElementById("result").value = checkbox[rowCount].checked.value;
+        
+          
+      }else{
         alert('There should be atleast one row');
         document.getElementById("result").value = 0;
-        
       }
       
+    }
 
-}

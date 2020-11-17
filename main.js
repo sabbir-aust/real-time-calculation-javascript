@@ -35,60 +35,39 @@
      
     //document.getElementById("result").value = myResult1;
     var table = document.getElementById("myTable").tBodies.namedItem("myTBody");
-    var sumVal = 0;
+    // var sumVal = 0;
 
-      for(var i = 0; i < table.rows.length; i++)
+    //   for(var i = 0; i < table.rows.length; i++)
         
-            {
-                let innerCell = table.rows[i].cells[4];
-                let textBox = innerCell.getElementsByTagName("input")[0];
+    //         {
+    //             let innerCell = table.rows[i].cells[4];
+    //             let textBox = innerCell.getElementsByTagName("input")[0];
          
-                sumVal = sumVal + parseFloat(textBox.value);
-                document.getElementById("result").value = sumVal;
-            }
+    //             sumVal = sumVal + parseFloat(textBox.value);
+    //             document.getElementById("result").value = sumVal;
+    //         }
             //console.log(sumVal);
    
             
     var checkbox = table.getElementsByClassName("myCheck");
     var checkVal = 0;
+   
     for (var i = 0; i < checkbox.length; i++) {
       
       if (checkbox[i].checked) {
+        
         let innerCell = table.rows[i].cells[4];
         var textBox = innerCell.getElementsByTagName("input")[0];
         var text = textBox.value;
 
         checkVal = checkVal + parseFloat(text);
-        document.getElementById("selectedRowResult").value = checkVal;
+        document.getElementById("result").value = checkVal;
         //selecteditem += checkbox[i].value;
-
-                
-      } else{
-        checkVal -= checkVal;
-        document.getElementById("selectedRowResult").value = checkVal;
       }
-      console.log(checkVal);
+
+}
+
   }
-    
-
-    
-  }
-
-  // function getSum(tableID) 
-  //   {
-  //     var table = document.getElementById(tableID);
-  //     var sumVal = 0;
-
-  //     for(var i=1; i < table.rows.length-1; i++)
-  //       {
-  //         let innerCell = table.rows[i].cells[3];
-  //         let textBox = innerCell.getElementsById("tl")[0];
-         
-  //         sumVal = sumVal + parseInt(textBox.value);
-  //       }
-  //       console.log("Sum => "+sumVal);  
-  //     //document.getElementById("result").value = sumVal;
-  //   }
 
 
   //Delete rows from the table
@@ -106,15 +85,15 @@
       let lastCellValue =(lastCell.value);
       console.log(lastCellValue);
 
-        if(rowCount == 2){
-          var gg = (lastCellValue);
-          console.log(gg);
-          document.getElementById("result").value = gg;
-        } else{
-            var gg = (finalResult) - (lastCellValue);
-            console.log(gg);
-            document.getElementById("result").value = gg;
-          }
+        // if(rowCount == 2){
+        //   // var gg = (lastCellValue);
+        //   // console.log(gg);
+        //   document.getElementById("result").value = 0;
+        // } else{
+        //     var gg = (finalResult) - (lastCellValue);
+        //     console.log(gg);
+        //     document.getElementById("result").value = gg;
+        //   }
 
       if(rowCount > '2'){
         
@@ -123,7 +102,9 @@
       }
       else{
         alert('There should be atleast one row');
+        document.getElementById("result").value = 0;
         
       }
+      
 
 }

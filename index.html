@@ -9,7 +9,7 @@
 
   <h1>Practice</h1>
   
-  <table border="1"  class="table table-sm" id="myTable">
+  <table  class="table table-sm" id="myTable">
     <thead class="container">
        <th><input type="button" value="Add" onClick="myFunction(myTable)"/>
         <input type="button" value="Delete" onClick="DeleteRows(myTable)"/></th> 
@@ -31,7 +31,7 @@
                     <input type="number" id="bs" required="required" name="basic" oninput ="calculate('row_0')" min="0">
                 </td>
                 <td>
-                    <input type="number" id="al" required="required" name="allowance" oninput ="calculate('row_0')">
+                    <input type="number" id="al" required="required" name="allowance" oninput ="calculate('row_0')" min="0">
                 </td>
                 <td>
                     <input class="t" type="number" required="required" name="total" id="tl" readonly>

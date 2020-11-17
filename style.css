@@ -27,7 +27,52 @@ table{
     border-radius: 5px;
     position: relative;
     border-collapse: collapse;
+    border: 2px solid black;
     
+}
+tbody{
+    border: 2px solid;
+}
+.table {
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #212529;
+  }
+  .table th,
+  .table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+  }
+
+.table-sm th,
+.table-sm td {
+  padding: 0.3rem;
+}
+@media (max-width: 575.98px) {
+    .table-responsive-sm {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .table-responsive-sm > .table-bordered {
+      border: 0;
+    }
+  }
+tr{
+    border: 1px solid black;
+    user-select: none;
+    border-right: 2px solid;
+}
+td{
+    border: 1px solid;
+    user-select: none;
+}
+th{
+    border: 1px solid black;
+    text-align: center;
 }
 
 input[type="button"]{
